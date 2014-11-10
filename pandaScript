@@ -1,0 +1,34 @@
+"""
+Created on Mon Nov 10 11:18:43 2014
+
+@author: Braden
+"""
+
+import pandas as pd
+
+def main():
+    df = pd.read_csv('Consumer_Complaints.csv', encoding='latin1')
+
+    number = int(input('How many Complaints would you like to print?'))
+    
+    x = 0
+    while(x < number):
+        print(df['Complaint ID'][x], df['Product'][x], df['Issue'][x], df['Company'][x])
+        x = x + 1
+
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+Output:
+
+runfile('/Users/Braden/Documents/myPy/pandaHomework.py', wdir='/Users/Braden/Documents/myPy')
+
+How many Complaints would you like to print?5
+1085677 Debt collection Cont'd attempts collect debt not owed Commonwealth Financial Systems, Inc.
+1085429 Mortgage Loan modification,collection,foreclosure Flagstar Bank
+1085758 Debt collection Cont'd attempts collect debt not owed Convergent Resources, Inc.
+1084511 Debt collection Disclosure verification of debt Fidelity Capital Holdings, Inc.
+1085192 Debt collection Disclosure verification of debt Expert Global Solutions, Inc.
